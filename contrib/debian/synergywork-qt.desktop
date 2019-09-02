@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ADSPLACE
+Comment=ADSPLACE P2P Cryptocurrency
+Comment[fr]=ADSPLACE, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ADSPLACE, eşten eşe kriptografik sanal para birimi
+Exec=adsplace-qt %u
+Terminal=false
+Type=Application
+Icon=adsplace128
+MimeType=x-scheme-handler/adsplace;
+Categories=Office;Finance;

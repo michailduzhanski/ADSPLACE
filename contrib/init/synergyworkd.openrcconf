@@ -1,0 +1,26 @@
+# /etc/conf.d/adsplaced: config file for /etc/init.d/adsplaced
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/adsplace/adsplace.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/adsplaced"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/adsplaced.pid"
+
+# Where to write adsplaced data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/adsplaced"
+
+# User and group to own adsplaced process
+#BITCOIND_USER="adsplace"
+#BITCOIND_GROUP="adsplace"
+
+# Path to adsplaced executable
+#BITCOIND_BIN="/usr/bin/adsplaced"
+
+# Nice value to run adsplaced under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

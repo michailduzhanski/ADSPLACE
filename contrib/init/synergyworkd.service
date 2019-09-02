@@ -1,0 +1,26 @@
+[Unit]
+Description=ADSPLACE's distributed currency daemon
+After=network.target
+
+[Service]
+User=adsplace
+Group=adsplace
+
+Type=forking
+PIDFile=/var/lib/adsplaced/adsplaced.pid
+
+ExecStart=/usr/bin/adsplaced -daemon -pid=/var/lib/adsplaced/adsplaced.pid \
+          -conf=/etc/adsplace/adsplace.conf -datadir=/var/lib/adsplaced
+
+ExecStop=-/usr/bin/adsplace-cli -conf=/etc/adsplace/adsplace.conf \
+         -datadir=/var/lib/adsplaced stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
