@@ -1765,7 +1765,6 @@ int64_t GetBlockValue(int nHeight)
     if (Params().NetworkID() == CBaseChainParams::REGTEST) {
         if (nHeight == 0)
             return 250 * COIN;
-
     }
 
     int64_t nSubsidy = 0;
@@ -2126,24 +2125,6 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         if (nHeight < 200)
             return 0;
     }
-
-    // if (nHeight <= 43200) {
-        // ret = blockValue / 5;
-    // } else if (nHeight < 10000 && nHeight > 43200) {
-        // ret = blockValue / (100 / 30);
-    // } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 50000) && nHeight >= 10000) {
-        // ret = 50 * COIN;
-    // } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 50000) {
-        // ret = blockValue / 2;
-    // } else if (nHeight < Params().Zerocoin_Block_V2_Start()) {
-        // return GetSeeSaw(blockValue, nMasternodeCount, nHeight);
-    // } else {
-        // //When zADS is staked, masternode only gets 2 ADS
-        // ret = 3 * COIN;
-        // if (isZADSStake)
-            // ret = 2 * COIN;
-    // }
-
 	ret = blockValue * 0.8;
     return ret;
 }
