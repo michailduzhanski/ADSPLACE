@@ -480,7 +480,7 @@ More information at [synergy-work.com](https://adsplace.com) Visit our ANN threa
 </table>
 
 # How to setup ADSPLACE masternode on Ubuntu
-Shell script to install or update [ADSPLACE Masternode](https://adsplace.com) on a Linux server running Ubuntu 18.04.
+Shell script to install or update [ADSPLACE Masternode](https://adsplace.io) on a Linux server running Ubuntu 18.04.
 ***
 
 ## VPS installation
